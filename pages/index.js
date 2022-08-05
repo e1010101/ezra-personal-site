@@ -19,26 +19,28 @@ import {
   IoLogoLinkedin,
 } from "react-icons/io5";
 import Section from "../components/section";
+import PopIn from "../components/popin";
 import Paragraph from "../components/paragraph";
 import { BioSection, BioYear } from "../components/bio";
-import { GridItem } from "../components/grid-item";
 import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <Container border="1px" borderColor="blue" m="auto" maxW="container.lg">
-      <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="center"
-        fontSize="lg"
-        fontWeight="bold"
-        bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-        css={{ backdropFilter: "blur(10px)" }}
-      >
-        Hello, I&apos;m a Computer Science student from Singapore!
-      </Box>
+      <Section>
+        <Box
+          borderRadius="lg"
+          mb={6}
+          p={3}
+          textAlign="center"
+          fontSize="lg"
+          fontWeight="bold"
+          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+          css={{ backdropFilter: "blur(10px)" }}
+        >
+          Hello, I&apos;m a Computer Science student from Singapore!
+        </Box>
+      </Section>
 
       <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
@@ -46,6 +48,24 @@ export default function Home() {
             Ezra Tio
           </Heading>
           <p>Student at the National University of Singapore</p>
+        </Box>
+        <Box
+          borderColor="whiteAlpha.800"
+          borderWidth={2}
+          borderStyle="solid"
+          w="100px"
+          h="100px"
+          display="inline-block"
+          borderRadius="full"
+          overflow="hidden"
+        >
+          {/* <ProfileImage
+              src="/images/takuya.jpg"
+              alt="Profile image"
+              borderRadius="full"
+              width="100%"
+              height="100%"
+            /> */}
         </Box>
         <Box
           flexShrink={0}
@@ -57,7 +77,7 @@ export default function Home() {
             borderColor="whiteAlpha.800"
             borderWidth={2}
             borderStyle="solid"
-            w="100px"
+            w="500px"
             h="100px"
             display="inline-block"
             borderRadius="full"
@@ -183,31 +203,6 @@ export default function Home() {
             </Link>
           </ListItem>
         </List>
-
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          {/* <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel (&gt;100k subs)
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem> */}
-        </SimpleGrid>
-
-        <Box align="center" my={4}>
-          <NextLink href="/posts" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </NextLink>
-        </Box>
       </Section>
     </Container>
   );

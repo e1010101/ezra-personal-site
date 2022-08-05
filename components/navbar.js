@@ -1,4 +1,4 @@
-// import Logo from "./logo";
+import Logo from "./logo";
 import NextLink from "next/link";
 import {
   Container,
@@ -27,6 +27,7 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
         p={2}
         bg={active ? "grassTeal" : undefined}
         color={active ? "#202023" : inactiveColor}
+        borderRadius={active ? "xl" : undefined}
         target={target}
         {...props}
       >
@@ -52,14 +53,14 @@ const Navbar = (props) => {
       <Container
         display="flex"
         p={2}
-        maxW="container.md"
+        maxW="container.lg"
         wrap="wrap"
         align="center"
         justify="space-between"
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-            {/* <Logo /> */}
+            <Logo />
           </Heading>
         </Flex>
 
@@ -74,9 +75,9 @@ const Navbar = (props) => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
+          {/* <LinkItem href="/posts" path={path}>
             Posts
-          </LinkItem>
+          </LinkItem> */}
           <LinkItem
             target="_blank"
             href="https://github.com/e1010101"
