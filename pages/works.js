@@ -20,8 +20,10 @@ const Works = () => (
             id="aiGallery"
             title="AI Image Gallery"
             thumbnail={thumbGallery}
+            link="https://ai-image-gallery.vercel.app/"
           >
-            A gallery of AI-generated artworks.
+            A gallery of AI-created artworks, generated from diffusive models
+            such as DALL-E 2, Midjourney and Stable Diffusion.
           </WorkGridItem>
         </Section>
         <Section>
@@ -29,6 +31,7 @@ const Works = () => (
             id="chessApp"
             title="BetterChess"
             thumbnail={thumbChess}
+            link="https://orbital-fried-liver.web.app/"
           >
             A website to play Chess with an emphasis on user engagement and
             community building.

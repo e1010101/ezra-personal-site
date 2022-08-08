@@ -26,7 +26,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <Container border="1px" borderColor="blue" m="auto" maxW="container.lg">
+    <Container m="auto" maxW="container.lg">
       <Section>
         <Box
           borderRadius="lg"
@@ -114,7 +114,7 @@ export default function Home() {
           .
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
+          <NextLink href="/works" scroll={false}>
             <motion.div
               style={{ display: "inline-block" }}
               whileHover={{ scale: 1.1 }}
@@ -151,7 +151,7 @@ export default function Home() {
         </Heading>
         <Paragraph>
           Music,{" "}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
+          <Link href="https://ai-image-gallery.vercel.app/" target="_blank">
             Generating Art with AI
           </Link>
           , Machine Learning
@@ -207,3 +207,5 @@ export default function Home() {
     </Container>
   );
 }
+
+export { getServerSideProps } from "../components/chakra";

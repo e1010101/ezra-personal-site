@@ -4,7 +4,7 @@ import NavBar from "../navbar";
 
 const Main = ({ children, router }) => {
   return (
-    <Box as="main" border="1px" borderColor="red" pb={8}>
+    <Box as="main" pb={8}>
       <Head>
         <title>Ezra Tio - Homepage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
