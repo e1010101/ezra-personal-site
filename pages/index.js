@@ -4,25 +4,24 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
   useColorModeValue,
-  Text,
+  chakra,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import {
-  IoLogoTwitter,
-  IoLogoInstagram,
-  IoLogoGithub,
-  IoLogoLinkedin,
-} from "react-icons/io5";
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Section from "../components/section";
 import PopIn from "../components/popin";
 import Paragraph from "../components/paragraph";
 import { BioSection, BioYear } from "../components/bio";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+const ProfileImage = chakra(Image, {
+  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
+});
 
 export default function Home() {
   return (
@@ -59,38 +58,13 @@ export default function Home() {
           borderRadius="full"
           overflow="hidden"
         >
-          {/* <ProfileImage
-              src="/images/takuya.jpg"
-              alt="Profile image"
-              borderRadius="full"
-              width="100%"
-              height="100%"
-            /> */}
-        </Box>
-        <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          textAlign="center"
-        >
-          <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            w="500px"
-            h="100px"
-            display="inline-block"
+          <ProfileImage
+            src="/images/photo.png"
+            alt="Profile image"
             borderRadius="full"
-            overflow="hidden"
-          >
-            {/* <ProfileImage
-              src="/images/takuya.jpg"
-              alt="Profile image"
-              borderRadius="full"
-              width="100%"
-              height="100%"
-            /> */}
-          </Box>
+            width="100%"
+            height="100%"
+          />
         </Box>
       </Box>
 

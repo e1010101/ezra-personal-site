@@ -36,7 +36,7 @@ const Main = ({ children, router }) => {
         <meta name="theme-color" content="#000000" />
       </Head>
       <NavBar path={router.asPath} />
-      <Container maxW="container.xl" pt={14} border="1px" borderColor="green">
+      <Container maxW="container.xl" pt={14}>
         {children}
       </Container>
     </Box>

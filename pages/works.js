@@ -5,7 +5,7 @@ import { WorkGridItem } from "../components/grid-item";
 
 import thumbGallery from "../public/images/works/galleryThumbnail.png";
 import thumbChess from "../public/images/works/chessappThumbnail.png";
-import thumbMargelo from "../public/images/works/margelo_eyecatch.png";
+import thumbHuman from "../public/images/works/humanThumbnail.png";
 
 const Works = () => (
   <Layout title="Works">
@@ -28,13 +28,13 @@ const Works = () => (
         </Section>
         <Section>
           <WorkGridItem
-            id="chessApp"
-            title="BetterChess"
-            thumbnail={thumbChess}
-            link="https://orbital-fried-liver.web.app/"
+            id="humanMod"
+            title="Harold The Human"
+            thumbnail={thumbHuman}
+            link="https://steamcommunity.com/sharedfiles/filedetails/?id=2489999372"
           >
-            A website to play Chess with an emphasis on user engagement and
-            community building.
+            A character modification for popular indie game Slay The Spire,
+            which introduces many new and interesting mechanics.
           </WorkGridItem>
         </Section>
         {/* <Section>
@@ -75,9 +75,14 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
-          <WorkGridItem id="margelo" thumbnail={thumbMargelo} title="Margelo">
-            A website of the elite app development and contracting agency based
-            in Austria
+          <WorkGridItem
+            id="chessApp"
+            title="BetterChess"
+            thumbnail={thumbChess}
+            link="https://orbital-fried-liver.web.app/"
+          >
+            A website to play Chess with an emphasis on user engagement and
+            community building.
           </WorkGridItem>
         </Section>
         {/* <Section delay={0.3}>
