@@ -8,7 +8,8 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra,
+  Flex,
+  Spacer,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
@@ -17,15 +18,20 @@ import PopIn from "../components/popin";
 import Paragraph from "../components/paragraph";
 import { BioSection, BioYear } from "../components/bio";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { ProfileThing } from "../components/ProfileThing";
 
-const ProfileImage = chakra(Image, {
-  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
-});
+const mural = `/images/backgrounds/groupBackground.png`;
+const mural2 = `/images/backgrounds/black.png`;
 
 export default function Home() {
   return (
-    <Container m="auto" maxW="container.lg">
+    <Container
+      m="auto"
+      maxW="container.lg"
+      background={useColorModeValue("#F7F9F7", "#210124")}
+      borderBottomRadius="xl"
+      p="10"
+    >
       <Section>
         <Box
           borderRadius="lg"
@@ -42,30 +48,28 @@ export default function Home() {
       </Section>
 
       <Box display={{ md: "flex" }}>
-        <Box flexGrow={1}>
+        <Box mr={20}>
           <Heading as="h2" variant="page-title">
             Ezra Tio
           </Heading>
           <p>Student at the National University of Singapore</p>
         </Box>
-        <Box
-          borderColor="whiteAlpha.800"
-          borderWidth={2}
-          borderStyle="solid"
-          w="100px"
-          h="100px"
-          display="inline-block"
+        <Flex
           borderRadius="full"
-          overflow="hidden"
+          flexGrow={1}
+          p={4}
+          pl={10}
+          pr={10}
+          bgImage={useColorModeValue(mural, mural2)}
+          bgPosition="top"
+          bgSize="1000px"
         >
-          <ProfileImage
-            src="/images/photo.png"
-            alt="Profile image"
-            borderRadius="full"
-            width="100%"
-            height="100%"
-          />
-        </Box>
+          <ProfileThing profile="/images/profiles/prof1.png" />
+          <Spacer />
+          <ProfileThing profile="/images/profiles/prof2.png" />
+          <Spacer />
+          <ProfileThing profile="/images/profiles/prof3.png" />
+        </Flex>
       </Box>
 
       <Section delay={0.1}>
@@ -124,11 +128,7 @@ export default function Home() {
           I ♥
         </Heading>
         <Paragraph>
-          Music,{" "}
-          <Link href="https://ai-image-gallery.vercel.app/" target="_blank">
-            Generating Art with AI
-          </Link>
-          , Machine Learning
+          Music, Generating Art with AI, Machine Learning, Drinking Coffee
         </Paragraph>
       </Section>
 
@@ -143,6 +143,10 @@ export default function Home() {
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
+                _hover={useColorModeValue(
+                  { backgroundColor: "black", color: "white" },
+                  { backgroundColor: "white", color: "black" }
+                )}
               >
                 @e1010101
               </Button>
@@ -157,6 +161,10 @@ export default function Home() {
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoLinkedin />}
+                _hover={useColorModeValue(
+                  { backgroundColor: "black", color: "white" },
+                  { backgroundColor: "white", color: "black" }
+                )}
               >
                 @Ezra Tio
               </Button>
@@ -171,6 +179,10 @@ export default function Home() {
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoInstagram />}
+                _hover={useColorModeValue(
+                  { backgroundColor: "black", color: "white" },
+                  { backgroundColor: "white", color: "black" }
+                )}
               >
                 @ezra.a.a.a.a
               </Button>

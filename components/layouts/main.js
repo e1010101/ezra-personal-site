@@ -1,10 +1,13 @@
 import Head from "next/head";
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Container, useColorModeValue } from "@chakra-ui/react";
 import NavBar from "../navbar";
+
+const mural = `/images/backgrounds/groupBackground.png`;
+const mural2 = `/images/backgrounds/black.png`;
 
 const Main = ({ children, router }) => {
   return (
-    <Box as="main" pb={8}>
+    <Box as="main" pb={8} bgImage={useColorModeValue(mural, mural2)}>
       <Head>
         <title>Ezra Tio - Homepage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
