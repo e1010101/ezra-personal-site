@@ -6,7 +6,7 @@ const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
-export const ProfileThing = ({ profile }) => {
+export const ProfileThing = ({ profile, onClick, id }) => {
   return (
     <Box
       w="100px"
@@ -15,6 +15,7 @@ export const ProfileThing = ({ profile }) => {
       borderRadius="full"
       overflow="hidden"
       cursor="pointer"
+      onClick={() => onClick(id)}
     >
       <motion.div
         style={{ display: "inline-block", textAlign: "center" }}

@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import { useState } from "react";
 import {
   Link,
   Container,
@@ -23,7 +24,17 @@ import { ProfileThing } from "../components/ProfileThing";
 const mural = `/images/backgrounds/groupBackground.png`;
 const mural2 = `/images/backgrounds/black.png`;
 
+const custom1 = `/images/backgrounds/back1.png`;
+const custom2 = `/images/backgrounds/back2.png`;
+const custom3 = `/images/backgrounds/back3.png`;
+
 export default function Home() {
+  const [isActive, setIsActive] = useState(0);
+
+  const handleClick = (back) => {
+    setIsActive(back);
+  };
+
   return (
     <Container
       m="auto"
@@ -60,15 +71,27 @@ export default function Home() {
           p={4}
           pl={10}
           pr={10}
-          bgImage={useColorModeValue(mural, mural2)}
+          bgImage={isActive == 0 ? custom1 : isActive == 1 ? custom2 : custom3}
           bgPosition="top"
           bgSize="1000px"
         >
-          <ProfileThing profile="/images/profiles/prof1.png" />
+          <ProfileThing
+            profile="/images/profiles/prof1.png"
+            onClick={handleClick}
+            id={0}
+          />
           <Spacer />
-          <ProfileThing profile="/images/profiles/prof2.png" />
+          <ProfileThing
+            profile="/images/profiles/prof2.png"
+            onClick={handleClick}
+            id={1}
+          />
           <Spacer />
-          <ProfileThing profile="/images/profiles/prof3.png" />
+          <ProfileThing
+            profile="/images/profiles/prof3.png"
+            onClick={handleClick}
+            id={2}
+          />
         </Flex>
       </Box>
 
