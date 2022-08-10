@@ -76,19 +76,19 @@ export default function Home() {
           bgSize="1000px"
         >
           <ProfileThing
-            profile="/images/profiles/prof1.png"
+            profile="/images/pink.png"
             onClick={handleClick}
             id={0}
           />
           <Spacer />
           <ProfileThing
-            profile="/images/profiles/prof2.png"
+            profile="/images/green.png"
             onClick={handleClick}
             id={1}
           />
           <Spacer />
           <ProfileThing
-            profile="/images/profiles/prof3.png"
+            profile="/images/blue.png"
             onClick={handleClick}
             id={2}
           />
