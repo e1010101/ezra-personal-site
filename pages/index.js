@@ -15,7 +15,6 @@ import {
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Section from "../components/section";
-import PopIn from "../components/popin";
 import Paragraph from "../components/paragraph";
 import { BioSection, BioYear } from "../components/bio";
 import { motion } from "framer-motion";
@@ -68,9 +67,9 @@ export default function Home() {
         <Flex
           borderRadius="full"
           flexGrow={1}
-          p={4}
-          pl={10}
-          pr={10}
+          p={"2%"}
+          pl={"2%"}
+          pr={"2%"}
           bgImage={isActive == 0 ? custom1 : isActive == 1 ? custom2 : custom3}
           bgPosition="top"
           bgSize="1000px"
@@ -97,7 +96,7 @@ export default function Home() {
 
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          About Me
         </Heading>
         <Paragraph>
           Ezra is adaptable and can quickly grasp new concepts and data

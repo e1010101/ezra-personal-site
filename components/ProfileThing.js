@@ -1,4 +1,4 @@
-import { Box, Text, chakra } from "@chakra-ui/react";
+import { Box, chakra } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -9,8 +9,8 @@ const ProfileImage = chakra(Image, {
 export const ProfileThing = ({ profile, onClick, id }) => {
   return (
     <Box
-      w="100px"
-      h="100px"
+      w={["4em", "5em", "6em"]}
+      h={["4em", "5em", "6em"]}
       display="inline-block"
       borderRadius="full"
       overflow="hidden"
