@@ -30,13 +30,13 @@ const hoverVariants = {
 };
 
 export const WorkGridItem = ({ children, id, title, thumbnail, link }) => (
-  <Box w="100%" textAlign="center">
-    <NextLink href={`${link}`} scroll={false}>
-      <LinkBox cursor="pointer">
-        <motion.div
-          variants={hoverVariants}
-          whileHover={useColorModeValue("hoverLight", "hoverDark")}
-        >
+  <motion.div
+    variants={hoverVariants}
+    whileHover={useColorModeValue("hoverLight", "hoverDark")}
+  >
+    <Box w="100%" textAlign="center">
+      <NextLink href={`${link}`} scroll={false}>
+        <LinkBox cursor="pointer">
           <Image src={thumbnail} alt={title} placeholder="blur" />
           <LinkOverlay href={`/works/${id}`}>
             <Text mt={2} fontSize={20}>
@@ -46,10 +46,10 @@ export const WorkGridItem = ({ children, id, title, thumbnail, link }) => (
           <Text fontSize={14} ml={4} mr={4}>
             {children}
           </Text>
-        </motion.div>
-      </LinkBox>
-    </NextLink>
-  </Box>
+        </LinkBox>
+      </NextLink>
+    </Box>
+  </motion.div>
 );
 
 export const GridItemStyle = () => (

@@ -1,4 +1,10 @@
-import { Container, Heading, SimpleGrid, Divider } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Divider,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
@@ -9,7 +15,14 @@ import thumbHuman from "../public/images/works/humanThumbnail.png";
 
 const Works = () => (
   <Layout title="Works">
-    <Container maxW="container.lg" textAlign="center">
+    <Container
+      m="auto"
+      maxW="container.lg"
+      textAlign="center"
+      background={useColorModeValue("#F7F9F7", "#210124")}
+      borderBottomRadius="xl"
+      p="10"
+    >
       <Heading as="h2" fontSize={40} mt={4} mb={4}>
         My Works
       </Heading>
@@ -23,7 +36,8 @@ const Works = () => (
             link="https://ai-image-gallery.vercel.app/"
           >
             A gallery of AI-created artworks, generated from diffusive models
-            such as DALL-E 2, Midjourney and Stable Diffusion.
+            such as DALL-E 2, Midjourney and Stable Diffusion, stored in a
+            dynamic gallery with some cool features.
           </WorkGridItem>
         </Section>
         <Section>
