@@ -11,6 +11,7 @@ import {
   useColorModeValue,
   Flex,
   Spacer,
+  Text,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
@@ -19,13 +20,6 @@ import Paragraph from "../components/paragraph";
 import { BioSection, BioYear } from "../components/bio";
 import { motion } from "framer-motion";
 import { ProfileThing } from "../components/ProfileThing";
-
-const mural = `/images/backgrounds/groupBackground.png`;
-const mural2 = `/images/backgrounds/black.png`;
-
-const custom1 = `/images/backgrounds/back1.png`;
-const custom2 = `/images/backgrounds/back2.png`;
-const custom3 = `/images/backgrounds/back3.png`;
 
 export default function Home() {
   const [isActive, setIsActive] = useState(0);
@@ -38,7 +32,7 @@ export default function Home() {
     <Container
       m="auto"
       maxW="container.lg"
-      background={useColorModeValue("#F7F9F7", "#210124")}
+      background={useColorModeValue("#F7F9F7", "#120013")}
       borderBottomRadius="xl"
       p="10"
     >
@@ -57,41 +51,18 @@ export default function Home() {
         </Box>
       </Section>
 
-      <Box display={{ md: "flex" }}>
+      <Box
+        display={{ sm: "flex", md: "flex" }}
+        justifyContent={{ sm: "center", md: "center" }}
+        alignItems={{ sm: "center", md: "center" }}
+      >
         <Box mr={20}>
           <Heading as="h2" variant="page-title">
             Ezra Tio
           </Heading>
           <p>Student at the National University of Singapore</p>
         </Box>
-        <Flex
-          borderRadius="full"
-          flexGrow={1}
-          p={"2%"}
-          pl={"2%"}
-          pr={"2%"}
-          bgImage={isActive == 0 ? custom1 : isActive == 1 ? custom2 : custom3}
-          bgPosition="top"
-          bgSize="1000px"
-        >
-          <ProfileThing
-            profile="/images/pink.png"
-            onClick={handleClick}
-            id={0}
-          />
-          <Spacer />
-          <ProfileThing
-            profile="/images/green.png"
-            onClick={handleClick}
-            id={1}
-          />
-          <Spacer />
-          <ProfileThing
-            profile="/images/blue.png"
-            onClick={handleClick}
-            id={2}
-          />
-        </Flex>
+        <ProfileThing profile="/images/selfie.jpg" />
       </Box>
 
       <Section delay={0.1}>

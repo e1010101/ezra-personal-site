@@ -7,11 +7,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <Chakra cookies={pageProps.cookies}>
       <Fonts />
-      <Layout
-        router={router}
-        title="Ezra's Gallery"
-        description="AI-Generated Artwork"
-      >
+      <Layout router={router}>
         <AnimatePresence
           exitBeforeEnter
           initial={true}

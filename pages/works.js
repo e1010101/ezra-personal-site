@@ -12,6 +12,7 @@ import { WorkGridItem } from "../components/grid-item";
 import thumbGallery from "../public/images/works/galleryThumbnail.png";
 import thumbChess from "../public/images/works/chessappThumbnail.png";
 import thumbHuman from "../public/images/works/humanThumbnail.png";
+import thumbPasword from "../public/images/works/passwordGeneratorThumbnail.png";
 
 const Works = () => (
   <Layout title="Works">
@@ -49,6 +50,17 @@ const Works = () => (
           >
             A character modification for popular indie game Slay The Spire,
             which introduces many new and interesting mechanics.
+          </WorkGridItem>
+        </Section>
+        <Section>
+          <WorkGridItem
+            id="passwordGenerator"
+            title="Password Generator"
+            thumbnail={thumbPasword}
+            link="https://ezra-password-generator.vercel.app/"
+          >
+            A random password generator with options for uppercase, numeric and
+            symbolic options.
           </WorkGridItem>
         </Section>
         {/* <Section>

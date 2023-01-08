@@ -6,22 +6,16 @@ const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
-export const ProfileThing = ({ profile, onClick, id }) => {
+export const ProfileThing = ({ profile }) => {
   return (
     <Box
-      w={["4em", "5em", "6em"]}
-      h={["4em", "5em", "6em"]}
+      w={["4rem", "5rem", "6rem"]}
+      h={["4rem", "5rem", "6rem"]}
       display="inline-block"
       borderRadius="full"
       overflow="hidden"
-      cursor="pointer"
-      onClick={() => onClick(id)}
     >
-      <motion.div
-        style={{ display: "inline-block", textAlign: "center" }}
-        whileHover={{ scale: 1.3 }}
-        whileTap={{ scale: 0.9 }}
-      >
+      <motion.div style={{ display: "inline-block", textAlign: "center" }}>
         <ProfileImage
           src={profile}
           alt="Profile image"
