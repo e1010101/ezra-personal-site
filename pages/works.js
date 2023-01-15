@@ -1,6 +1,8 @@
+import NextLink from "next/link";
 import {
   Container,
   Heading,
+  Link,
   SimpleGrid,
   Divider,
   useColorModeValue,
@@ -13,6 +15,7 @@ import thumbGallery from "../public/images/works/galleryThumbnail.png";
 import thumbChess from "../public/images/works/chessappThumbnail.png";
 import thumbHuman from "../public/images/works/humanThumbnail.png";
 import thumbPasword from "../public/images/works/passwordGeneratorThumbnail.png";
+import thumbDataAnalysis1 from "../public/images/works/dataAnalysis1Thumbnail.png";
 
 const Works = () => (
   <Layout title="Works">
@@ -61,6 +64,27 @@ const Works = () => (
           >
             A random password generator with options for uppercase, numeric and
             symbolic options.
+          </WorkGridItem>
+        </Section>
+        <Section>
+          <WorkGridItem
+            id="dataAnalysis1"
+            title="911 Call Dataset Analysis"
+            thumbnail={thumbDataAnalysis1}
+            link="https://colab.research.google.com/drive/18I39pqDRmLb5SqvSZUI4D7iPe1pSjP1N?usp=sharing"
+          >
+            Exploratory data analysis conducted on a 911 call dataset from{" "}
+            <NextLink
+              href="https://www.kaggle.com/datasets/mchirico/montcoalert"
+              passHref
+              scroll={false}
+            >
+              <Link target="_blank" rel="noopener noreferrer">
+                Kaggle
+              </Link>
+            </NextLink>
+            . Analysis and data visualisation is conducted with pandas and
+            seaborn.
           </WorkGridItem>
         </Section>
         {/* <Section>
