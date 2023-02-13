@@ -34,7 +34,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail, link }) => (
     variants={hoverVariants}
     whileHover={useColorModeValue("hoverLight", "hoverDark")}
   >
-    <Box w="100%" textAlign="center">
+    <Box h="sm" w="100%" textAlign="center">
       <NextLink href={`${link}`} scroll={false}>
         <LinkBox cursor="pointer">
           <Image src={thumbnail} alt={title} placeholder="blur" />
