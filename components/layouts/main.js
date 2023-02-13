@@ -7,7 +7,7 @@ const mural2 = `/images/backgrounds/black.png`;
 
 const Main = ({ children, router }) => {
   return (
-    <Box as="main" pb={8} bg={useColorModeValue("#EEEEEE", "#000000")}>
+    <Box as="main" pb={8} bg={useColorModeValue("#EBEBEB", "#19112C")}>
       <Head>
         <title>Ezra Tio - Homepage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

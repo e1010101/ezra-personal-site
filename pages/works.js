@@ -11,11 +11,11 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
 
-import thumbGallery from "../public/images/works/galleryThumbnail.png";
-import thumbChess from "../public/images/works/chessappThumbnail.png";
-import thumbHuman from "../public/images/works/humanThumbnail.png";
-import thumbPasword from "../public/images/works/passwordGeneratorThumbnail.png";
-import thumbDataAnalysis1 from "../public/images/works/dataAnalysis1Thumbnail.png";
+import thumbGallery from "../public/images/works/galleryThumbnail.webp";
+import thumbChess from "../public/images/works/chessappThumbnail.webp";
+import thumbHuman from "../public/images/works/humanThumbnail.webp";
+import thumbPasword from "../public/images/works/passwordGeneratorThumbnail.webp";
+import thumbDataAnalysis1 from "../public/images/works/dataAnalysis1Thumbnail.webp";
 
 const Works = () => (
   <Layout title="Works">
