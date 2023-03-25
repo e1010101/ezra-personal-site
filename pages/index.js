@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import { FaKaggle } from "react-icons/fa";
 import Section from "../components/section";
 import Paragraph from "../components/paragraph";
 import { BioSection, BioYear } from "../components/bio";
@@ -136,6 +137,21 @@ export default function Home() {
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
+                _hover={useColorModeValue(
+                  { backgroundColor: "black", color: "white" },
+                  { backgroundColor: "white", color: "black" }
+                )}
+              >
+                @e1010101
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://www.kaggle.com/e1010101" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<FaKaggle />}
                 _hover={useColorModeValue(
                   { backgroundColor: "black", color: "white" },
                   { backgroundColor: "white", color: "black" }
