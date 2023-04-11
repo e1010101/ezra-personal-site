@@ -11,6 +11,7 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
 
+import thumbDinosaur from "../public/images/works/dinosaurDetectorThumbnail.webp";
 import thumbGallery from "../public/images/works/galleryThumbnail.webp";
 import thumbChess from "../public/images/works/chessappThumbnail.webp";
 import thumbHuman from "../public/images/works/humanThumbnail.webp";
@@ -32,6 +33,19 @@ const Works = () => (
       </Heading>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
+        <Section>
+          <WorkGridItem
+            id="dinosaurDetector"
+            title="Dinosaur Detector"
+            thumbnail={thumbDinosaur}
+            link="https://dinosaur-detector.netlify.app/"
+          >
+            A simple custom-trained image recognition model. Users can upload an
+            image and the model will classify it as a dinosaur or not. The model
+            was trained with images of dinosaurs, humans, landscapes, animals
+            and vehicles.
+          </WorkGridItem>
+        </Section>
         <Section>
           <WorkGridItem
             id="aiGallery"
@@ -87,32 +101,6 @@ const Works = () => (
             seaborn.
           </WorkGridItem>
         </Section>
-        {/* <Section>
-          <WorkGridItem
-            id="walknote"
-            title="walknote"
-            thumbnail={thumbWalknote}
-          >
-            Music recommendation app for iOS
-          </WorkGridItem>
-        </Section>
-
-        <Section delay={0.1}>
-          <WorkGridItem
-            id="fourpainters"
-            title="The four painters"
-            thumbnail={thumbFourPainters}
-          >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
-          </WorkGridItem>
-        </Section> */}
       </SimpleGrid>
 
       <Section delay={0.2}>
@@ -135,20 +123,6 @@ const Works = () => (
             community building.
           </WorkGridItem>
         </Section>
-        {/* <Section delay={0.3}>
-          <WorkGridItem
-            id="modetokyo"
-            thumbnail={thumbModeTokyo}
-            title="mode.tokyo"
-          >
-            The mode magazine for understanding to personally enjoy Japan
-          </WorkGridItem>
-        </Section>
-        <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
-            A VR Creative tools for fashion brands
-          </WorkGridItem>
-        </Section> */}
       </SimpleGrid>
     </Container>
   </Layout>
