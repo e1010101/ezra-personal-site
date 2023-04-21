@@ -17,6 +17,7 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
 import { IoLogoGithub } from "react-icons/io5";
+// import Resume from "../public/resume/Resume_V5.pdf";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -89,6 +90,13 @@ const Navbar = (props) => {
           >
             <IoLogoGithub />
             Source
+          </LinkItem>
+          <LinkItem
+            href="Resume_V5.pdf"
+            download="Ezra's Resume.pdf"
+            target="_blank"
+          >
+            Download My Resume!
           </LinkItem>
         </Stack>
 
