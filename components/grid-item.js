@@ -34,21 +34,17 @@ export const WorkGridItem = ({ children, id, title, thumbnail, link }) => (
     variants={hoverVariants}
     whileHover={useColorModeValue("hoverLight", "hoverDark")}
   >
-    <Box h={["sm", "auto"]} w="100%" textAlign="center">
-      <NextLink href={`${link}`} scroll={false}>
-        <LinkBox cursor="pointer">
-          <Image src={thumbnail} alt={title} placeholder="blur" />
-          <LinkOverlay href={`/works/${id}`}>
-            <Text mt={2} fontSize={20}>
-              {title}
-            </Text>
-          </LinkOverlay>
-          <Text fontSize={14} ml={4} mr={4}>
-            {children}
-          </Text>
-        </LinkBox>
-      </NextLink>
-    </Box>
+    <a href={link} target="_blank" rel="noreferrer">
+      <Box h={["sm", "auto"]} w="100%" textAlign="center" cursor="pointer">
+        <Image src={thumbnail} alt={title} placeholder="blur" />
+        <Text mt={2} fontSize={20}>
+          {title}
+        </Text>
+        <Text fontSize={14} ml={4} mr={4}>
+          {children}
+        </Text>
+      </Box>
+    </a>
   </motion.div>
 );
 
