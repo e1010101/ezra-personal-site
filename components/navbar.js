@@ -90,7 +90,7 @@ const Navbar = (props) => {
             Source
           </LinkItem>
           <LinkItem
-            href="Resume_V5.pdf"
+            href="Resume_V6.pdf"
             download="Ezra's Resume.pdf"
             target="_blank"
           >
