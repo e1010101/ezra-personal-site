@@ -62,18 +62,6 @@ const Works = () => (
                 </Section>
                 <Section>
                     <WorkGridItem
-                        id="humanMod"
-                        title="Harold The Human"
-                        thumbnail={thumbHuman}
-                        link="https://steamcommunity.com/sharedfiles/filedetails/?id=2489999372"
-                    >
-                        A character modification for popular indie game Slay The
-                        Spire, which introduces many new and interesting
-                        mechanics.
-                    </WorkGridItem>
-                </Section>
-                <Section>
-                    <WorkGridItem
                         id="passwordGenerator"
                         title="Password Generator"
                         thumbnail={thumbPasword}
