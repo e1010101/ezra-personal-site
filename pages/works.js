@@ -14,10 +14,10 @@ import { WorkGridItem } from "../components/grid-item";
 import thumbDinosaur from "../public/images/works/dinosaurDetectorThumbnail.webp";
 import thumbGallery from "../public/images/works/galleryThumbnail.webp";
 import thumbChess from "../public/images/works/chessappThumbnail.webp";
-import thumbHuman from "../public/images/works/humanThumbnail.webp";
 import thumbPasword from "../public/images/works/passwordGeneratorThumbnail.webp";
 import thumbDataAnalysis1 from "../public/images/works/dataAnalysis1Thumbnail.webp";
 import thumbStableDiffusion from "../public/images/works/stableDiffusionThumbnail.webp";
+import thumbComputerVision from "../public/images/works/computerVisionThumbnail.webp";
 
 const Works = () => (
     <Layout title="Works">
@@ -104,6 +104,18 @@ const Works = () => (
                         pipeline, allowing a user to generate images from a text
                         prompt. A prompt is encoded to a text embedding, which
                         is used to guide the generation process in latent space.
+                    </WorkGridItem>
+                </Section>
+                <Section>
+                    <WorkGridItem
+                        id="computerVisionExploration"
+                        title="Computer Vision Exploration"
+                        thumbnail={thumbComputerVision}
+                        link="https://colab.research.google.com/drive/1EyTuHpyjTNeaCx1Ix6Yc51jSgNMFRPCs?usp=sharing"
+                    >
+                        A notebook exploring fundemental computer vision
+                        techniques such as image annotation, image alignment,
+                        image enhancement and HDR.
                     </WorkGridItem>
                 </Section>
             </SimpleGrid>
