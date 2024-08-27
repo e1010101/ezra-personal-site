@@ -35,8 +35,8 @@ export const WorkGridItem = ({ children, id, title, thumbnail, link }) => (
     whileHover={useColorModeValue("hoverLight", "hoverDark")}
   >
     <a href={link} target="_blank" rel="noreferrer">
-      <Box h={["sm", "auto"]} w="100%" textAlign="center" cursor="pointer">
-        <Image src={thumbnail} alt={title} placeholder="blur" />
+      <Box h={["auto"]} w="100%" textAlign="center" cursor="pointer">
+        <Image h="50px" src={thumbnail} alt={title} placeholder="blur" />
         <Text mt={2} fontSize={20}>
           {title}
         </Text>
